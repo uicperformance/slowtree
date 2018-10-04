@@ -77,12 +77,6 @@ int main(int argc, char *argv[])
 	unsigned long nr_read, nr_write, nr_txn;
 	void *list;
 
-	#ifdef FFWD
-		ffwd_init();
-		fiber_manager_init(NUM_OF_HARDWARE_THREADS_CLIENTS);
-		launch_servers(4);
-	#endif
-
 	stop = 0;
 
 	while (1) {
