@@ -25,7 +25,7 @@ static node_t *new_tree_node(int key,char* value,int value_len)
 	node->child[1] = NULL;
 
 	int len = value_len;
-	if(len<MAXVAL) len=MAXVAL;
+	if(len>MAXVAL) len=MAXVAL;
 	memcpy(node->value,value,value_len);
 
 	return node;
